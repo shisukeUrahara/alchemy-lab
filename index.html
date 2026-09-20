@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Alchemy Lab</title>
+  </head>
+  <body>
+    <div id="app">
+      <aside id="sidebar">
+        <header>
+          <div class="title-row">
+            <h1>Alchemy Lab</h1>
+            <button id="mute" type="button" aria-label="Mute sound" aria-pressed="false">🔊</button>
+          </div>
+          <p class="progress"><span id="count">4</span> / <span id="total">10</span> discovered</p>
+        </header>
+        <input id="search" type="search" placeholder="Search elements…" autocomplete="off" />
+        <div id="element-list"></div>
+        <footer>
+          <button id="hint" type="button">Hint</button>
+          <button id="clear-board" type="button">Clear board</button>
+          <button id="reset" type="button" class="danger">Reset</button>
+        </footer>
+      </aside>
+      <main id="board">
+        <canvas id="game" touch-action="none"></canvas>
+        <p id="board-hint">Click an element to place it · drag one onto another to combine</p>
+        <div id="toast" class="toast"></div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
